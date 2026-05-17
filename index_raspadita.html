@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugate una raspadita</title>
+    <link rel="stylesheet" href="styles_raspadita.css">
+    <link rel="shortcut icon" href="favicon_raspadita.ico" type="image/x-icon">
+    <style>
+        /*para que nos se mueva la pantalla*/
+        body, html {
+            touch-action: none;
+            overscroll-behavior: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="scratch-container">
+        <canvas id="scratchCanvas"></canvas>
+        <div class="overlay-text">Raspadita</div>
+    </div>
+    <script src="script_raspadita.js"></script>
+</body>
+</html>
