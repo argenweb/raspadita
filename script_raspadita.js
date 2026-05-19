@@ -69,9 +69,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         let percent = (clearPixels / totalPixels) * 100;
-        if (percent > 95) { // Si más del 95% del área está raspada - originalmente 90
-            window.location.href = "ganador_raspadita.html"; // Redirigir a la página del ganador
-        }
+        if (percent > 95) {
+            canvas.style.backgroundImage = "url('imagen_ganadora.jpg')";
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            overlayText.style.display = "none";
+            isDrawing = false;
+        }        // Redirigir a la página del ganador
     }
 
     canvas.addEventListener('mousedown', function(e) {
@@ -113,5 +116,9 @@ document.addEventListener("DOMContentLoaded", function() {
     canvas.addEventListener('touchend', function() {
         isDrawing = false;
     });
+});
+
+document.getElementById("reloadButton").addEventListener("click", function() {
+    location.reload();
 });
 

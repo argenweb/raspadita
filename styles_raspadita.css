@@ -1,15 +1,25 @@
 body {
     margin: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    /* Fondo */
-    /* background: url('fondo.jpg') no-repeat center center fixed; */
     overflow: hidden;
 }
 
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* separación entre raspadita y botón */
+}
+
+.scratch-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
 .scratch-container {
     position: relative;
     width: 300px;
@@ -34,4 +44,19 @@ canvas {
     font-family: Arial, sans-serif;
     z-index: 2;
     pointer-events: none; 
+}
+
+#reloadButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#reloadButton:hover {
+    background-color: #0056b3;
 }
