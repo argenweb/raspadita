@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         let percent = (clearPixels / totalPixels) * 100;
-        if (percent > 95) {
+        if (percent > 99) {
             canvas.style.backgroundImage = "url('imagen_ganadora.jpg')";
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             overlayText.style.display = "none";
